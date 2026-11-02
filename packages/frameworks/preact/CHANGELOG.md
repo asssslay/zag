@@ -1,5 +1,27 @@
 # @zag-js/preact
 
+## 2.0.0-next.4
+
+### Major Changes
+
+- [`8f659ca`](https://github.com/chakra-ui/zag/commit/8f659ca7e15aae533d00807aece809589da569a9) Thanks
+  [@segunadebayo](https://github.com/segunadebayo)! - - Require Preact 11 and stop depending on `preact/compat`, so apps
+  without compat no longer bundle it.
+  - Keep `send`, `prop`, `context`, `computed`, `refs` and `getStatus` referentially stable across renders, so they're
+    safe in effect dependencies.
+  - Compare bindable values with `Object.is` by default, matching the other adapters.
+  - Type prop getters with Preact's HTML attributes, without signals, so they spread onto any element.
+  - Fix characters getting dropped when typing fast into an input whose value a machine syncs, such as combobox or
+    tags-input.
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @zag-js/core@2.0.0-next.4
+  - @zag-js/store@2.0.0-next.4
+  - @zag-js/types@2.0.0-next.4
+  - @zag-js/utils@2.0.0-next.4
+
 ## 2.0.0-next.3
 
 ## 1.47.0
